@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Akriti Chaudhary</h1>
+            <p>Web Developer | Designer | Creative Thinker</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <img src="akriti_image.jpg" alt="Your Name" class="profile-img">
+            <p>
+                Hi, I'm Akriti Chaudhary, a passionate web developer with experience in HTML, CSS, JavaScript, and more. 
+                I love creating responsive and user-friendly websites. Here's a little more about my skills and projects!
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>UI/UX Design</li>
+                <li>Version Control (Git)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>FESTIFY: A college Event Management System</h3>
+                <p>A responsive Event Management System built using HTML,CSS and JavaScript. It makes the work easy for student as well as for college management to gain the knowlede of what's happening in the college. </p>
+            </div>
+            <div class="project">
+                <h3>SPENDERA: An Expence Tracking website</h3>
+                <p>An expense tracking website typically serves to help users manage their finances effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <p>Download my resume to learn more about my experience and qualifications.</p>
+            <a href="Akriti_Resume.pdf" download class="btn">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: akritic206@gmail.com</p>
+            <p>Phone: +91 82679 XXXXX</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Akriti Chaudhary. All rights reserved.</p>
+            <a href="https://www.linkedin.com/in/akriti-chaudhary-11456a281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a> | <a href="https://github.com/akritiichaudharyy">GitHub</a> | <a href="#">Twitter</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+    
+            function revealSections() {
+                sections.forEach((section) => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 0.85) {
+                        section.classList.add("in-view");
+                    }
+                });
+            }
+    
+            revealSections();
+            window.addEventListener("scroll", revealSections);
+        });
+    </script>    
+    
+    
+</body>
+</html>
